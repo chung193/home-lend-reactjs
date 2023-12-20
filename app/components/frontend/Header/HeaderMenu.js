@@ -24,6 +24,9 @@ import FullscreenExitOutlined from '@mui/icons-material/FullscreenExitOutlined';
 import InvertColors from '@mui/icons-material/InvertColorsOutlined';
 import HelpOutlineOutlined from '@mui/icons-material/HelpOutlineOutlined';
 import { injectIntl, FormattedMessage } from 'react-intl';
+import MenuItem from '@mui/material/MenuItem';
+import Typography from '@mui/material/Typography';
+import List from '@mui/material/List';
 import messages from './messages';
 import SelectLanguage from '../SelectLanguage';
 import SidebarContent from '../Sidebar/SidebarContent';
@@ -145,46 +148,18 @@ function HeaderMenu(props) { // eslint-disable-line
           <NavLink to={logoLink} className={classes.brand}>
             <img src={logo} alt={brand.name} />
           </NavLink>
-          {/* <div className={classes.headerProperties}>
-            <div className={cx(classes.headerAction, classes.invert)}>
-              {fullScreen ? (
-                <Tooltip title="Exit Full Screen" placement="bottom">
-                  <IconButton className={classes.button} onClick={closeFullScreen} size="large">
-                    <FullscreenExitOutlined />
-                  </IconButton>
-                </Tooltip>
-              ) : (
-                <Tooltip title="Full Screen" placement="bottom">
-                  <IconButton className={classes.button} onClick={openFullScreen} size="large">
-                    <FullscreenOutlined />
-                  </IconButton>
-                </Tooltip>
-              )}
-              <Tooltip title="Turn Dark/Light" placement="bottom">
-                <IconButton className={classes.button} onClick={() => turnMode(mode)} size="large">
-                  <InvertColors />
-                </IconButton>
-              </Tooltip>
-              <Tooltip title="Show Guide" placement="bottom">
-                <IconButton className={classes.button} onClick={openGuide} size="large">
-                  <HelpOutlineOutlined />
-                </IconButton>
-              </Tooltip>
-            </div>
-          </div> */}
         </Hidden>
-        {/* <div className={classes.searchHeaderMenu}>
-          <div className={cx(classes.wrapper, classes.dark)}>
-            <div className={classes.search}>
-              <SearchIcon />
-            </div>
-            <SearchUi history={history} />
-          </div>
-        </div> */}
+
         <Toolbar>
-          <div>
-            {menuArray.map((item) => (<p>{item.name}</p>))}
-          </div>
+          <Hidden lgDown>
+            <List>
+              {menuArray.map((item) => (
+                <MenuItem sx={{ display: 'inline-block' }} key={item.key} onClick={() => { console.log('on menu click'); }}>
+                  <Typography textAlign="center">{item.name}</Typography>
+                </MenuItem>))}
+            </List>
+          </Hidden>
+
           <SelectLanguage />
           {isLogin
             ? <UserMenu signOut={signOut} avatar={userAttr.avatar} />
@@ -203,11 +178,7 @@ function HeaderMenu(props) { // eslint-disable-line
           }
         </Toolbar>
       </div>
-      {/* <Hidden lgDown>
-        <Fragment>
-          { type === 'mega-menu' ? <MegaMenu dataMenu={dataMenu} /> : <DropListMenu dataMenu={dataMenu} />}
-        </Fragment>
-      </Hidden> */}
+
       <Hidden lgUp>
         <SwipeableDrawer
           onClose={toggleDrawerOpen}

@@ -58,49 +58,7 @@ function SidebarContent(props) {
 
   return (
     <div className={cx(classes.drawerInner, !drawerPaper ? classes.drawerPaperClose : '')}>
-      <div className={classes.drawerHeader}>
-        <div
-          className={classes.profile}
-          style={{ opacity: 1 - (transform / 100), marginTop: transform * -0.3 }}
-        >
-          <Avatar
-            alt={userAttr.name}
-            src={userAttr.avatar}
-            className={cx(classes.avatar, classes.bigAvatar)}
-          />
-          <div>
-            <h4>{userAttr.name}</h4>
-            <Button size="small" onClick={openMenuStatus}>
-              <i className={cx(classes.dotStatus, setStatus(status))} />
-              <FormattedMessage {...messages[status]} />
-            </Button>
-            <Menu
-              id="status-menu"
-              anchorEl={anchorEl}
-              open={Boolean(anchorEl)}
-              onClose={closeMenuStatus}
-              className={classes.statusMenu}
-            >
-              <MenuItem onClick={() => changeStatus('online')}>
-                <i className={cx(classes.dotStatus, classes.online)} />
-                <FormattedMessage {...messages.online} />
-              </MenuItem>
-              <MenuItem onClick={() => changeStatus('idle')}>
-                <i className={cx(classes.dotStatus, classes.idle)} />
-                <FormattedMessage {...messages.idle} />
-              </MenuItem>
-              <MenuItem onClick={() => changeStatus('bussy')}>
-                <i className={cx(classes.dotStatus, classes.bussy)} />
-                <FormattedMessage {...messages.bussy} />
-              </MenuItem>
-              <MenuItem onClick={() => changeStatus('offline')}>
-                <i className={cx(classes.dotStatus, classes.offline)} />
-                <FormattedMessage {...messages.offline} />
-              </MenuItem>
-            </Menu>
-          </div>
-        </div>
-      </div>
+
       <div
         id="sidebar"
         ref={refSidebar}
@@ -108,7 +66,7 @@ function SidebarContent(props) {
           cx(
             classes.menuContainer,
             leftSidebar && classes.rounded,
-            classes.withProfile
+
           )
         }
       >

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { PropTypes } from 'prop-types';
 import { Switch, Route } from 'react-router-dom';
-import Dashboard from '../Templates/Backend/Dashboard';
+import Dashboard from '../Templates/Frontend/Dashboard';
 import { ThemeContext } from './ThemeWrapper';
 import {
   DashboardPage,
@@ -13,7 +13,7 @@ import {
   Parent
 } from '../pageListAsync';
 
-function Application(props) {
+function Frontend(props) {
   const { history } = props;
   const changeMode = useContext(ThemeContext);
 
@@ -21,7 +21,7 @@ function Application(props) {
     <Dashboard history={history} changeMode={changeMode}>
       <Switch>
         { /* Home */ }
-        <Route exact path="/app" component={BlankPage} />
+        <Route exact path="/" component={BlankPage} />
         <Route path="/app/pages/dashboard" component={DashboardPage} />
         <Route path="/app/pages/form" component={Form} />
         <Route path="/app/pages/table" component={Table} />
@@ -34,8 +34,8 @@ function Application(props) {
   );
 }
 
-Application.propTypes = {
+Frontend.propTypes = {
   history: PropTypes.object.isRequired
 };
 
-export default Application;
+export default Frontend;

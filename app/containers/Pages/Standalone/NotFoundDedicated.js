@@ -1,6 +1,6 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
-import useStyles from 'containers/Templates/appStyles-jss';
+import useStyles from 'containers/Templates/Backend/appStyles-jss';
 import { ErrorWrap } from 'enl-components';
 import { injectIntl } from 'react-intl';
 import messages from 'enl-components/Error/messages';

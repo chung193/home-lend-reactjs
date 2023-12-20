@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import brand from 'enl-api/dummy/brand';
 import { ResetForm } from 'enl-components';
-import useStyles from '../../../components/Forms/user-jss';
+import useStyles from '../../../components/Backend/Forms/user-jss';
 
 function ResetPassword() {
   const { classes } = useStyles();

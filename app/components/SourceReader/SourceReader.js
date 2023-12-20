@@ -14,7 +14,7 @@ import Close from '@mui/icons-material/Close';
 import Icon from '@mui/material/Icon';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
-import codePreview from '../../config/codePreview';
+import codePreview from '../../../config/codePreview';
 
 const url = '/api/docs?src=';
 

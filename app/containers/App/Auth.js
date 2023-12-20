@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import NotFound from 'containers/Pages/Standalone/NotFoundDedicated';
-import Outer from '../Templates/Outer';
+import Outer from '../Templates/Backend/Outer';
 import {
   Login, Register,
   LoginFullstack, RegisterFullstack,
@@ -13,14 +13,15 @@ function Auth() {
   return (
     <Outer>
       <Switch>
-        <Route path="/login" component={Login} />
-        <Route path="/register" component={Register} />
-        <Route path="/reset-password" component={ResetPassword} />
-        <Route path="/login-firebase" component={LoginFullstack} />
-        <Route path="/register-firebase" component={RegisterFullstack} />
-        <Route path="/reset-password-firebase" component={ResetPasswordFullstack} />
-        <Route path="/maintenance" component={Maintenance} />
-        <Route path="/coming-soon" component={ComingSoon} />
+        <Route path="/auth" exact component={Login} />
+        <Route path="/auth/login" component={Login} />
+        <Route path="/auth/register" component={Register} />
+        <Route path="/auth/reset-password" component={ResetPassword} />
+        <Route path="/auth/login-firebase" component={LoginFullstack} />
+        <Route path="/auth/register-firebase" component={RegisterFullstack} />
+        <Route path="/auth/reset-password-firebase" component={ResetPasswordFullstack} />
+        <Route path="/auth/maintenance" component={Maintenance} />
+        <Route path="/auth/coming-soon" component={ComingSoon} />
         <Route component={NotFound} />
       </Switch>
     </Outer>

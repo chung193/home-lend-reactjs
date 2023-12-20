@@ -6,7 +6,7 @@ import brand from 'enl-api/dummy/brand';
 import PropTypes from 'prop-types';
 import { ResetForm } from 'enl-components';
 import { passwordForget } from 'enl-redux/actions/authActions';
-import useStyles from '../../../components/Forms/user-jss';
+import useStyles from '../../../components/Backend/Forms/user-jss';
 
 function ResetPassword(props) {
   const { forgotPwd } = props;

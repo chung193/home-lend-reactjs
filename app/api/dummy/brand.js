@@ -1,7 +1,7 @@
 module.exports = {
-  name: 'Enlite Starter',
-  desc: 'Enlite Starter - React.js Fullstack Template',
-  prefix: 'enlite',
-  footerText: 'Enlite Starter All Rights Reserved 2020',
-  logoText: 'Enlite Starter',
+  name: 'Home Smart Lend',
+  desc: 'Home Smart Lend - React.js Fullstack Template',
+  prefix: 'Home Smart Lend',
+  footerText: 'Home Smart Lend All Rights Reserved 2023',
+  logoText: 'Home Smart Lend',
 };

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { PropTypes } from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { GuideSlider } from 'enl-components';
+import { GuideSlider } from 'enl-layout-components';
 import { toggleAction, openAction, playTransitionAction } from 'enl-redux/actions/uiActions';
 import { logout } from 'enl-redux/actions/authActions';
 import dummy from 'enl-api/dummy/dummyContents';

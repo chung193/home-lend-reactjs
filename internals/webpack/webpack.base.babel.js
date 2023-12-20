@@ -221,6 +221,8 @@ module.exports = options => ({
     },
     alias: {
       'enl-components': path.resolve(__dirname, '../../app/components/'),
+      'enl-layout-components': path.resolve(__dirname, '../../../app/components/'),
+      'enl-layout-child-components': path.resolve(__dirname, '../../../../app/components/'),
       'enl-containers': path.resolve(__dirname, '../../app/containers/'),
       'enl-styles': path.resolve(__dirname, '../../app/styles/components/'),
       'enl-api': path.resolve(__dirname, '../../app/api/'),

@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { PropTypes } from 'prop-types';
 import Fade from '@mui/material/Fade';
 import Typography from '@mui/material/Typography';
-import { HeaderMenu, BreadCrumb } from 'enl-components';
+import { HeaderMenu, BreadCrumb } from 'enl-layout-child-components';
 import dataMenu from 'enl-api/ui/menu';
 import { injectIntl, FormattedMessage } from 'react-intl';
 import messages from 'enl-api/ui/menuMessages';

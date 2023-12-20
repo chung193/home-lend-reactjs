@@ -6,12 +6,12 @@ import { ThemeContext } from './ThemeWrapper';
 import {
   LandingPage,
   DashboardPage,
-  BlankPage,
   Error,
   NotFound,
   Form,
   Table,
-  Parent
+  Parent,
+  HomePage
 } from '../pageListAsync';
 
 function Frontend(props) {
@@ -22,7 +22,7 @@ function Frontend(props) {
     <Landing history={history} changeMode={changeMode}>
       <Switch>
         { /* Home */ }
-        <Route exact path="/" component={BlankPage} />
+        <Route exact path="/" component={HomePage} />
         <Route path="/pages/dashboard" component={DashboardPage} />
         <Route path="/pages/form" component={Form} />
         <Route path="/pages/table" component={Table} />

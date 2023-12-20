@@ -151,8 +151,9 @@ function HeaderMenu(props) { // eslint-disable-line
         </Hidden>
 
         <Toolbar>
+
           <Hidden lgDown>
-            <List>
+            <List sx={{ marginRight: 2 }}>
               {menuArray.map((item) => (
                 <MenuItem sx={{ display: 'inline-block' }} key={item.key} onClick={() => { console.log('on menu click'); }}>
                   <Typography textAlign="center">{item.name}</Typography>

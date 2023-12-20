@@ -74,3 +74,8 @@ export const LandingPage = loadable(() =>
   import ('./Pages/Frontend/Landing'), {
     fallback: <Loading />,
   });
+
+  export const HomePage = loadable(() =>
+  import ('./Pages/Frontend/HomePage'), {
+    fallback: <Loading />,
+  });

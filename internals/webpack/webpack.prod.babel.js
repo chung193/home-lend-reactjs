@@ -98,7 +98,7 @@ module.exports = require('./webpack.base.babel')({
     //    }),
     new CompressionPlugin({
       algorithm: 'gzip',
-      test: /\.js$|\.css$|\.html$/,
+      test: /\.js$|\.scss$|\.html$/,
       threshold: 10240,
       minRatio: 0.8,
     }),

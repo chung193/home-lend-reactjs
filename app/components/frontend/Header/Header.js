@@ -182,6 +182,7 @@ function Header(props) {
             </Typography>
           </div>
         </Hidden>
+
         <div className={classes.searchWrapper}>
           <div className={classes.wrapper}>
             <div className={classes.search}>

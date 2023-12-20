@@ -32,6 +32,7 @@ import MegaMenu from './MegaMenu';
 import UserMenu from './UserMenu';
 import useStyles from './header-jss';
 import SearchUi from '../Search/SearchUi';
+import menuArray from '../../../api/ui/menu';
 
 const elem = document.documentElement;
 
@@ -181,6 +182,9 @@ function HeaderMenu(props) { // eslint-disable-line
           </div>
         </div> */}
         <Toolbar>
+          <div>
+            {menuArray.map((item) => (<p>{item.name}</p>))}
+          </div>
           <SelectLanguage />
           {isLogin
             ? <UserMenu signOut={signOut} avatar={userAttr.avatar} />

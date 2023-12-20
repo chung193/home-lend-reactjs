@@ -6,7 +6,7 @@ import {
   Header,
   Sidebar,
   BreadCrumb,
-} from 'enl-layout-child-components';
+} from 'enl-components';
 import dataMenu from 'enl-api/ui/menu';
 import { injectIntl, FormattedMessage } from 'react-intl';
 import messages from 'enl-api/ui/menuMessages';

@@ -62,7 +62,7 @@ function ThemeWrapper(props) {
     setTheme(createTheme(applicationTheme(color, newMode, direction)));
     changeMode(newMode);
   };
-  console.log(props);
+
   useEffect(() => {
     // Remove loading bar
     setLoading(0);

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { PropTypes } from 'prop-types';
-import { HeaderLanding, Footer } from 'enl-layout-components';
+import { HeaderLanding, Footer } from 'enl-components';
 import useStyles from './appStyles-jss';
 
 function Corporate(props) {

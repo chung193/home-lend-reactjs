@@ -2,17 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { PropTypes } from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { GuideSlider } from 'enl-layout-components';
+import { GuideSlider } from 'enl-components-frontend';
 import { toggleAction, openAction, playTransitionAction } from 'enl-redux/actions/uiActions';
 import { logout } from 'enl-redux/actions/authActions';
 import dummy from 'enl-api/dummy/dummyContents';
-import LeftSidebarLayout from './layouts/LeftSidebar';
-import LeftSidebarBigLayout from './layouts/LeftSidebarBig';
-import MegaMenuLayout from './layouts/MegaMenu';
 import DropMenuLayout from './layouts/DropMenu';
 import useStyles from './appStyles-jss';
 
-function Dashboard(props) {
+function Landing(props) {
   const { classes, cx } = useStyles();
   const {
     initialOpen,
@@ -84,101 +81,34 @@ function Dashboard(props) {
       className={
         cx(
           classes.appFrameInner,
-          layout === 'top-navigation' || layout === 'mega-menu' ? classes.topNav : classes.sideNav,
+          classes.topNav,
           mode === 'dark' ? 'dark-mode' : 'light-mode'
         )
       }
     >
       <GuideSlider openGuide={openGuide} closeGuide={handleCloseGuide} />
-      { /* Left Sidebar Layout */
-        layout === 'sidebar' && (
-          <LeftSidebarLayout
-            history={history}
-            toggleDrawer={toggleDrawer}
-            loadTransition={loadTransition}
-            changeMode={changeMode}
-            sidebarOpen={sidebarOpen}
-            pageLoaded={pageLoaded}
-            mode={mode}
-            place={place}
-            titleException={titleException}
-            handleOpenGuide={handleOpenGuide}
-            signOut={signOut}
-            isLogin={isAuthenticated}
-            userAttr={profile(user)}
-          >
-            { children }
-          </LeftSidebarLayout>
-        )
-      }
-      { /* Left Big-Sidebar Layout */
-        layout === 'big-sidebar' && (
-          <LeftSidebarBigLayout
-            history={history}
-            toggleDrawer={toggleDrawer}
-            loadTransition={loadTransition}
-            changeMode={changeMode}
-            sidebarOpen={sidebarOpen}
-            pageLoaded={pageLoaded}
-            mode={mode}
-            place={place}
-            titleException={titleException}
-            handleOpenGuide={handleOpenGuide}
-            signOut={signOut}
-            isLogin={isAuthenticated}
-            userAttr={profile(user)}
-          >
-            { children }
-          </LeftSidebarBigLayout>
-        )
-      }
-      { /* Top Bar with Dropdown Menu */
-        layout === 'top-navigation' && (
-          <DropMenuLayout
-            history={history}
-            toggleDrawer={toggleDrawer}
-            loadTransition={loadTransition}
-            changeMode={changeMode}
-            sidebarOpen={sidebarOpen}
-            pageLoaded={pageLoaded}
-            mode={mode}
-            place={place}
-            titleException={titleException}
-            handleOpenGuide={handleOpenGuide}
-            signOut={signOut}
-            isLogin={isAuthenticated}
-            userAttr={profile(user)}
-          >
-            { children }
-          </DropMenuLayout>
-        )
-      }
-      { /* Top Bar with Mega Menu */
-        layout === 'mega-menu' && (
-          <MegaMenuLayout
-            history={history}
-            toggleDrawer={toggleDrawer}
-            loadTransition={loadTransition}
-            changeMode={changeMode}
-            sidebarOpen={sidebarOpen}
-            pageLoaded={pageLoaded}
-            mode={mode}
-            place={place}
-            titleException={titleException}
-            handleOpenGuide={handleOpenGuide}
-            signOut={signOut}
-            isLogin={isAuthenticated}
-            userAttr={profile(user)}
-          >
-            { children }
-          </MegaMenuLayout>
-        )
-      }
+      <DropMenuLayout
+        history={history}
+        toggleDrawer={toggleDrawer}
+        loadTransition={loadTransition}
+        changeMode={changeMode}
+        sidebarOpen={sidebarOpen}
+        pageLoaded={pageLoaded}
+        mode={mode}
+        place={place}
+        titleException={titleException}
+        handleOpenGuide={handleOpenGuide}
+        signOut={signOut}
+        isLogin={isAuthenticated}
+        userAttr={profile(user)}
+      >
+        { children }
+      </DropMenuLayout>
     </div>
   );
 }
 
-Dashboard.propTypes = {
+Landing.propTypes = {
   children: PropTypes.node.isRequired,
   history: PropTypes.object.isRequired,
   initialOpen: PropTypes.func.isRequired,
@@ -194,7 +124,7 @@ Dashboard.propTypes = {
   layout: PropTypes.string.isRequired,
 };
 
-Dashboard.defaultProps = {
+Landing.defaultProps = {
   user: null,
   isAuthenticated: null
 };
@@ -215,9 +145,9 @@ const mapDispatchToProps = dispatch => ({
   signOut: bindActionCreators(logout, dispatch)
 });
 
-const DashboardMaped = connect(
+const LandingMaped = connect(
   mapStateToProps,
   mapDispatchToProps
-)(Dashboard);
+)(Landing);
 
-export default DashboardMaped;
+export default LandingMaped;

@@ -1,5 +1,5 @@
 import React from 'react';
-import Outer from '../../Templates/Backend/Outer';
+import Outer from '../../Templates/backend/Outer';
 import { Login } from '../../pageListAsync';
 
 function LoginDedicated() {

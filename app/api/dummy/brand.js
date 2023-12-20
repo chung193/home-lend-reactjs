@@ -1,7 +1,7 @@
 module.exports = {
-  name: 'Home Smart Lend',
-  desc: 'Home Smart Lend - React.js Fullstack Template',
-  prefix: 'Home Smart Lend',
-  footerText: 'Home Smart Lend All Rights Reserved 2023',
-  logoText: 'Home Smart Lend',
+  name: 'Home Lend Smart',
+  desc: 'Home Lend Smart - React.js Fullstack Template',
+  prefix: 'Home Lend Smart',
+  footerText: 'Home Lend Smart All Rights Reserved 2020',
+  logoText: 'Home Lend Smart',
 };

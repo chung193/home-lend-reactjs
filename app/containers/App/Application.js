@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { PropTypes } from 'prop-types';
 import { Switch, Route } from 'react-router-dom';
-import Dashboard from '../Templates/Backend/Dashboard';
+import Dashboard from '../Templates/backend/Dashboard';
 import { ThemeContext } from './ThemeWrapper';
 import {
   DashboardPage,

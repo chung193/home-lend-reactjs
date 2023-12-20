@@ -357,8 +357,9 @@ const applicationTheme = (color, mode, direction) => ({
     MuiPickersClockPointer: {
       styleOverrides: {
         thumb: {
-          boxShadow: `0 1px 10px 0px ${themePalette(color, mode).palette.primary.main
-            }`,
+          boxShadow: `0 1px 10px 0px ${
+            themePalette(color, mode).palette.primary.main
+          }`,
         },
       }
     },

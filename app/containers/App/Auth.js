@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import NotFound from 'containers/Pages/Standalone/NotFoundDedicated';
-import Outer from '../Templates/Backend/Outer';
+import Outer from '../Templates/backend/Outer';
 import {
   Login, Register,
   LoginFullstack, RegisterFullstack,
@@ -13,7 +13,6 @@ function Auth() {
   return (
     <Outer>
       <Switch>
-        <Route path="/auth" exact component={Login} />
         <Route path="/auth/login" component={Login} />
         <Route path="/auth/register" component={Register} />
         <Route path="/auth/reset-password" component={ResetPassword} />

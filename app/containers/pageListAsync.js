@@ -68,3 +68,9 @@ export const NotFoundDedicated = loadable(() =>
   import ('./Pages/Standalone/NotFoundDedicated'), {
     fallback: <Loading />,
   });
+
+// frontend
+export const LandingPage = loadable(() =>
+  import ('./Pages/Frontend/Landing'), {
+    fallback: <Loading />,
+  });

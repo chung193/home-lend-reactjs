@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { PropTypes } from 'prop-types';
 import Fade from '@mui/material/Fade';
 import Typography from '@mui/material/Typography';
-import { HeaderMenu, BreadCrumb } from 'enl-layout-child-components';
+import { HeaderMenu, BreadCrumb } from 'enl-components-frontend';
 import dataMenu from 'enl-api/ui/menu';
 import { injectIntl, FormattedMessage } from 'react-intl';
 import messages from 'enl-api/ui/menuMessages';
@@ -30,7 +30,7 @@ function DropMenuLayout(props) {
   return (
     <Fragment>
       <HeaderMenu
-        type="top-navigation"
+        // type="top-navigation"
         dataMenu={dataMenu}
         changeMode={changeMode}
         mode={mode}
@@ -39,7 +39,7 @@ function DropMenuLayout(props) {
         toggleDrawerOpen={toggleDrawer}
         openMobileNav={sidebarOpen}
         loadTransition={loadTransition}
-        logoLink="/app"
+        logoLink="/"
         signOut={signOut}
         isLogin={isLogin}
         userAttr={userAttr}

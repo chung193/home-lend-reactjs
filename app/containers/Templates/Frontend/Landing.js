@@ -6,6 +6,7 @@ import { GuideSlider } from 'enl-components-frontend';
 import { toggleAction, openAction, playTransitionAction } from 'enl-redux/actions/uiActions';
 import { logout } from 'enl-redux/actions/authActions';
 import dummy from 'enl-api/dummy/dummyContents';
+import { Footer } from 'enl-components-frontend/';
 import DropMenuLayout from './layouts/DropMenu';
 import useStyles from './appStyles-jss';
 
@@ -104,6 +105,7 @@ function Landing(props) {
       >
         { children }
       </DropMenuLayout>
+      <Footer/>
     </div>
   );
 }

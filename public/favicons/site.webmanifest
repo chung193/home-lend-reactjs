@@ -1,0 +1,141 @@
+function saveChangeCell(datatype, type) {
+      var flag = false;
+      if (datatype == 0) {
+        var list = [];
+        $('input:checkbox[name=listVal]').each(function () {
+          if ($(this).is(':checked')) list.push($(this).val());
+        });
+        var listString = list.join(" ");
+      }
+
+      if (datatype == 1) {
+        var num = $("#quantity").val();
+        // if(!Number.isInteger(num)){
+        //     notify.error('This field must be integer');
+        //     return;
+        // }
+        var initData = _iniContent.StageConfigINI[type];
+        if (num > initData.Max || num < initData.Min) {
+          notify.error("This field must from " + initData.Min + " to " + initData.Max);
+          return;
+        } else { }
+      }
+
+      if (datatype == 2) {
+        var bool = $("#inputBool").val();
+      }
+
+      if (datatype == 3) {
+        var str = $("#inputString").val();
+      }
+
+      var obj = mainMap.get(_menucontextId);
+
+      if (type == 'StageNo' || type == 'StageID') {
+        if (type == 'StageNo') {
+          if (typeof obj != 'undefined') {
+            var _iteratorNormalCompletion2 = true;
+            var _didIteratorError2 = false;
+            var _iteratorError2 = undefined;
+
+            try {
+              for (var _iterator2 = mainMap[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+                var _ref3 = _step2.value;
+
+                var _ref4 = _slicedToArray(_ref3, 2);
+
+                var key = _ref4[0];
+                var value = _ref4[1];
+
+                if (value.StageNo === num) {
+                  notify.error("Duplicate data");
+                  flag = true;
+                  return;
+                }
+              }
+            } catch (err) {
+              _didIteratorError2 = true;
+              _iteratorError2 = err;
+            } finally {
+              try {
+                if (!_iteratorNormalCompletion2 && _iterator2.return) {
+                  _iterator2.return();
+                }
+              } finally {
+                if (_didIteratorError2) {
+                  throw _iteratorError2;
+                }
+              }
+            }
+          };
+        }
+
+        if (datatype == 0) {
+          obj[type] = listString;
+        }
+        if (datatype == 1) {
+          obj[type] = num;
+        }
+        if (datatype == 2) {
+          obj[type] = bool;
+        }
+        if (datatype == 3) {
+          obj[type] = str;
+        }
+      }
+
+      if ((type == 'Slots' || type == 'Flags' || type == 'WorkType' || type == 'UseArm') && !flag) {
+
+        if (typeof obj.Attribute === 'undefined') {
+          obj.Attribute = {};
+          obj.Attribute[type] = null;
+        }
+        if (datatype == 0) {
+          obj.Attribute[type] = listString;
+        }
+        if (datatype == 1) {
+          if (num < 0) {
+            notify.error("This field isn't negative");
+            return;
+          }
+          obj.Attribute[type] = num;
+        }
+        if (datatype == 2) {
+          obj.Attribute[type] = bool;
+        }
+
+        if (datatype == 3) {
+          if (type == 'Slots') {
+            if (parseInt(str) < 0) {
+              notify.error("This field isn't negative");
+              return;
+            }
+          }
+          obj.Attribute[type] = str;
+        }
+      }
+
+      if ((type == 'FrontMapping' || type == 'DistWorkCenter' || type == 'DownMapping' || type == 'ExceptionStage') && !flag) {
+        if (typeof obj.MapParam === 'undefined') {
+          obj.MapParam = {};
+          obj.MapParam[type] = null;
+        }
+
+        if (datatype == 0) {
+          obj.MapParam[type] = listString;
+        }
+        if (datatype == 1) {
+          obj.MapParam[type] = num;
+        }
+        if (datatype == 2) {
+          obj.MapParam[type] = bool;
+        }
+        if (datatype == 3) {
+          obj.MapParam[type] = str;
+        }
+      }
+
+      notify.success("Edit change success");
+      hideContext();
+      loadUILocal();
+    };"sizes":"512x512","type":"image/png"}],"theme_color":"#ffffff","background_color":"#ffffff","display":"standalone"}

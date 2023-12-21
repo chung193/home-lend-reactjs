@@ -185,7 +185,10 @@ module.exports = options => ({
       NODE_ENV: 'development',
     }),
     new webpack.ProvidePlugin({
-      process: 'process/browser'
+      process: 'process/browser',
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery'
     }),
     new webpack.ContextReplacementPlugin(/^\.\/locale$/, context => {
       if (!/\/moment\//.test(context.context)) { return; }

@@ -21,3 +21,4 @@ export RegisterFormFirebase from './Forms/RegisterFormFirebase';
 export EmptyData from './Tables/EmptyData';
 // Error
 export ErrorWrap from './Error/ErrorWrap';
+export Footer from './Footer/Footer';

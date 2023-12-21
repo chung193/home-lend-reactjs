@@ -3,6 +3,8 @@ module.exports = {
   login: '/login-firebase',
   register: '/register-firebase',
   market: '#',
+  linkedln: '#',
+  facebook: '#',
   task: '/app/pages/task',
   profile: '/app/pages/user-profile',
   calendar: '/app/pages/calendar',

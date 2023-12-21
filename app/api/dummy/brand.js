@@ -4,4 +4,5 @@ module.exports = {
   prefix: 'Home Lend Smart',
   footerText: 'Home Lend Smart All Rights Reserved 2020',
   logoText: 'Home Lend Smart',
+  hotline: '0796496199'
 };

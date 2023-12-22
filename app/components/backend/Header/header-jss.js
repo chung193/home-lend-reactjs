@@ -1,6 +1,7 @@
 import { makeStyles } from 'tss-react/mui';
 import { alpha, lighten } from '@mui/material/styles';
-import flag from 'enl-images/flag-lang.png';
+import viFlag from 'enl-images/vietnam.png';
+import enFlag from 'enl-images/english.jpg';
 const drawerWidth = 240;
 
 const flagIcon = {
@@ -11,25 +12,12 @@ const flagIcon = {
   position: 'relative',
   marginRight: 5,
   top: 1,
-  background: `url(${flag}) no-repeat transparent`,
-  backgroundSize: '16px auto',
-  '&[class="ar"]': {
-    backgroundPosition: '0 3px'
-  },
-  '&[class="zh"]': {
-    backgroundPosition: '0 -12px'
+  backgroundSize: '16px 16px !important',
+  '&[class="vi"]': {
+    background: `url(${viFlag}) no-repeat transparent`,
   },
   '&[class="en"]': {
-    backgroundPosition: '0 -28px'
-  },
-  '&[class="de"]': {
-    backgroundPosition: '0 -44px'
-  },
-  '&[class="id"]': {
-    backgroundPosition: '0 -62px'
-  },
-  '&[class="es"]': {
-    backgroundPosition: '0 -79px'
+    background: `url(${enFlag}) no-repeat transparent`,
   },
 };
 

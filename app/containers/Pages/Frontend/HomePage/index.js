@@ -28,11 +28,11 @@ function HomePage(props) {
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />
       </Helmet>
-
+      <Slideshow/>
       <Feature/>
       <FeatureBanner/>
       <CarouselList/>
-      <Slideshow/>
+
       <Services/>
       <Suggest/>
       <CarouselCenter/>

@@ -32,7 +32,6 @@ function HomePage(props) {
       <Feature/>
       <FeatureBanner/>
       <CarouselList/>
-
       <Services/>
       <Suggest/>
       <CarouselCenter/>

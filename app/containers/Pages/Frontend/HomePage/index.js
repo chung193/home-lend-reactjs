@@ -9,6 +9,8 @@ import { CarouselList, Slideshow, CarouselCenter } from 'enl-components-frontend
 import { Services } from 'enl-components-frontend/Homepage/section/services';
 import { Suggest } from 'enl-components-frontend/Homepage/section/suggest';
 import Model3D from 'enl-components-frontend/mode3D';
+import Latest from 'enl-components-frontend/Homepage/section/news/Latest';
+import SearchForm from 'enl-components-frontend/SearchForm/SearchForm';
 
 import messages from './messages';
 
@@ -26,6 +28,7 @@ function HomePage(props) {
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />
       </Helmet>
+
       <Feature/>
       <FeatureBanner/>
       <CarouselList/>
@@ -34,6 +37,8 @@ function HomePage(props) {
       <Suggest/>
       <CarouselCenter/>
       <Model3D/>
+      <Latest/>
+      <SearchForm/>
     </div>
   );
 }

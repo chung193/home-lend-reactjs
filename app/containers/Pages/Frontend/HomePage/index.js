@@ -28,16 +28,21 @@ function HomePage(props) {
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />
       </Helmet>
-      <Slideshow/>
-      <SearchForm/>
-      <Feature/>
-      <FeatureBanner/>
-      <CarouselList/>
-      <Services/>
-      <Suggest/>
-      <CarouselCenter/>
-      <Model3D/>
-      <Latest/>
+      <Slideshow />
+      <SearchForm />
+      <Feature />
+      <CarouselList
+        title="Tin đăng nổi bật"
+        type={"post"}
+      />
+      <Suggest />
+      <FeatureBanner />
+      <CarouselList />
+      <Services />
+      
+      <CarouselCenter />
+      <Model3D />
+      <Latest />
 
     </div>
   );

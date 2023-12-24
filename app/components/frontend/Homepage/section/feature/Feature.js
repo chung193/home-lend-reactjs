@@ -29,9 +29,10 @@ export default function Feature(props) {
   return (
     <Box className={myStyle.containerMain}>
       <Box className={myStyle.contentContainer}>
-        <Grid container spacing={2} className={myStyle.featureContainer}>
-          <Grid item xs={4}>
-            <ImageList sx={{ width: 500, height: 450, overflowY: 'hidden !important' }} cols={2} rowHeight={200}>
+
+        <Grid container className={myStyle.featureContainer}>
+          <Grid item xs={6}>
+            <ImageList sx={{height: 450, overflowY: 'hidden !important' }} cols={2} rowHeight={200}>
               {itemData.map((item) => (
                 <ImageListItem key={item.img}>
                   <img
@@ -44,15 +45,16 @@ export default function Feature(props) {
               ))}
             </ImageList>
           </Grid>
-          <Grid item xs={4}>
-            <Typography variant="h6" display="block" gutterBottom>
+          <Grid item xs={6} sx={{padding:10}}>
+            <Typography variant="h2" display="block" gutterBottom>
               Hướng tới tương lai
             </Typography>
-            <Typography variant="caption" display="block" gutterBottom>
+            <Typography variant="caption" display="p" gutterBottom>
               Chúng tôi tin vào một thế giới nơi việc tìm nhà chỉ là một cú nhấp chuột.Cho dù bạn đang bán nhà, đi công tác hay chuyển đếnmột thành phố mới. Chỉ cần mang theo hành lý của bạn, và chúng tôi sẽ xử lý phần còn lại.
             </Typography>
           </Grid>
         </Grid>
+
       </Box>
     </Box>
   );

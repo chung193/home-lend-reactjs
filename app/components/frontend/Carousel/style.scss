@@ -18,3 +18,21 @@
 .item {
     background: gray
 }
+
+.itemContainer{
+    background-color: #F2F0F2;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.textContent{
+    padding:20px
+}
+.imgContainer{
+    max-height: 200px;
+    width: auto;
+}
+
+.mainContainer{
+    padding: 80px 0
+}

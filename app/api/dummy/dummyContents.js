@@ -5,6 +5,38 @@ const dummyContents = {
     avatar: '/images/avatars/pp_boy4.jpg',
     status: 'online'
   },
+  suggest: [
+    {
+      name: "Hà Nội",
+      img:"https://scontent.fhan14-4.fna.fbcdn.net/v/t39.30808-6/399269405_998743947874812_8248821321287434148_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=MALZZ4__ULYAX_5nLkk&_nc_ht=scontent.fhan14-4.fna&oh=00_AfAwbDX5Tpv594IhlcraPjXRRXvTQPpHDTFsTqrrrnJBoQ&oe=658C239D",
+      ur:"http://google.com"
+    },
+    {
+      name: "Hà Nội",
+      img:"https://scontent.fhan14-4.fna.fbcdn.net/v/t39.30808-6/399269405_998743947874812_8248821321287434148_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=MALZZ4__ULYAX_5nLkk&_nc_ht=scontent.fhan14-4.fna&oh=00_AfAwbDX5Tpv594IhlcraPjXRRXvTQPpHDTFsTqrrrnJBoQ&oe=658C239D",
+      ur:"http://google.com"
+    },
+    {
+      name: "Hà Nội",
+      img:"https://scontent.fhan14-4.fna.fbcdn.net/v/t39.30808-6/399269405_998743947874812_8248821321287434148_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=MALZZ4__ULYAX_5nLkk&_nc_ht=scontent.fhan14-4.fna&oh=00_AfAwbDX5Tpv594IhlcraPjXRRXvTQPpHDTFsTqrrrnJBoQ&oe=658C239D",
+      ur:"http://google.com"
+    },
+    {
+      name: "Hà Nội",
+      img:"https://scontent.fhan14-4.fna.fbcdn.net/v/t39.30808-6/399269405_998743947874812_8248821321287434148_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=MALZZ4__ULYAX_5nLkk&_nc_ht=scontent.fhan14-4.fna&oh=00_AfAwbDX5Tpv594IhlcraPjXRRXvTQPpHDTFsTqrrrnJBoQ&oe=658C239D",
+      ur:"http://google.com"
+    },
+    {
+      name: "Hà Nội",
+      img:"https://scontent.fhan14-4.fna.fbcdn.net/v/t39.30808-6/399269405_998743947874812_8248821321287434148_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=MALZZ4__ULYAX_5nLkk&_nc_ht=scontent.fhan14-4.fna&oh=00_AfAwbDX5Tpv594IhlcraPjXRRXvTQPpHDTFsTqrrrnJBoQ&oe=658C239D",
+      ur:"http://google.com"
+    },
+    {
+      name: "Hà Nội",
+      img:"https://scontent.fhan14-4.fna.fbcdn.net/v/t39.30808-6/399269405_998743947874812_8248821321287434148_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=MALZZ4__ULYAX_5nLkk&_nc_ht=scontent.fhan14-4.fna&oh=00_AfAwbDX5Tpv594IhlcraPjXRRXvTQPpHDTFsTqrrrnJBoQ&oe=658C239D",
+      ur:"http://google.com"
+    }
+  ],
   text: {
     title: 'Lorem ipsum',
     subtitle: 'Ut a lorem eu odio cursus laoreet.',
@@ -15,6 +47,7 @@ const dummyContents = {
   post: [
     {
       key: 1,
+      img: 'https://scontent.fhan14-1.fna.fbcdn.net/v/t1.6435-9/96216659_2740685166054139_5417589197902970880_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=0bb214&_nc_ohc=Cq6vZnmAMPQAX8lNyGI&_nc_ht=scontent.fhan14-1.fna&oh=00_AfAFxyE6gNna7qxgAw2dAtjuK8yp1KB75X59ZQRfagtvgg&oe=65AF21FE',
       title: 'Lorem ipsum',
       subtitle: 'Ut a lorem eu odio cursus laoreet.',
       sentences: 'Donec lacus sem, scelerisque sed ligula nec, iaculis porttitor mauris.',
@@ -23,6 +56,8 @@ const dummyContents = {
     },
     {
       key: 2,
+      img: 'https://scontent.fhan14-1.fna.fbcdn.net/v/t1.6435-9/96216659_2740685166054139_5417589197902970880_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=0bb214&_nc_ohc=Cq6vZnmAMPQAX8lNyGI&_nc_ht=scontent.fhan14-1.fna&oh=00_AfAFxyE6gNna7qxgAw2dAtjuK8yp1KB75X59ZQRfagtvgg&oe=65AF21FE',
+
       title: 'Lorem ipsum',
       subtitle: 'Ut a lorem eu odio cursus laoreet.',
       sentences: 'Donec lacus sem, scelerisque sed ligula nec, iaculis porttitor mauris.',
@@ -31,6 +66,8 @@ const dummyContents = {
     },
     {
       key: 3,
+      img: 'https://scontent.fhan14-1.fna.fbcdn.net/v/t1.6435-9/96216659_2740685166054139_5417589197902970880_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=0bb214&_nc_ohc=Cq6vZnmAMPQAX8lNyGI&_nc_ht=scontent.fhan14-1.fna&oh=00_AfAFxyE6gNna7qxgAw2dAtjuK8yp1KB75X59ZQRfagtvgg&oe=65AF21FE',
+
       title: 'Lorem ipsum',
       subtitle: 'Ut a lorem eu odio cursus laoreet.',
       sentences: 'Donec lacus sem, scelerisque sed ligula nec, iaculis porttitor mauris.',
@@ -39,6 +76,8 @@ const dummyContents = {
     },
     {
       key: 4,
+      img: 'https://scontent.fhan14-1.fna.fbcdn.net/v/t1.6435-9/96216659_2740685166054139_5417589197902970880_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=0bb214&_nc_ohc=Cq6vZnmAMPQAX8lNyGI&_nc_ht=scontent.fhan14-1.fna&oh=00_AfAFxyE6gNna7qxgAw2dAtjuK8yp1KB75X59ZQRfagtvgg&oe=65AF21FE',
+
       title: 'Lorem ipsum',
       subtitle: 'Ut a lorem eu odio cursus laoreet.',
       sentences: 'Donec lacus sem, scelerisque sed ligula nec, iaculis porttitor mauris.',
@@ -47,6 +86,8 @@ const dummyContents = {
     },
     {
       key: 5,
+      img: 'https://scontent.fhan14-1.fna.fbcdn.net/v/t1.6435-9/96216659_2740685166054139_5417589197902970880_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=0bb214&_nc_ohc=Cq6vZnmAMPQAX8lNyGI&_nc_ht=scontent.fhan14-1.fna&oh=00_AfAFxyE6gNna7qxgAw2dAtjuK8yp1KB75X59ZQRfagtvgg&oe=65AF21FE',
+
       title: 'Lorem ipsum',
       subtitle: 'Ut a lorem eu odio cursus laoreet.',
       sentences: 'Donec lacus sem, scelerisque sed ligula nec, iaculis porttitor mauris.',

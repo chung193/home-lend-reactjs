@@ -6,6 +6,12 @@ import FormControl from '@mui/material/FormControl';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import Stack from '@mui/material/Stack';
+import InputAdornment from '@mui/material/InputAdornment';
+import {
+  faAngleDown
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import myStyles from '../style.scss';
 import Slider from '../FormItems/Slider';
 
 export default function MenuPrice() {
@@ -20,15 +26,26 @@ export default function MenuPrice() {
 
   return (
     <>
-      <Typography variant="h6" component="h6">
-                Mức giá
-      </Typography>
       <TextField
-        label="Size"
-        id="filled-size-small"
-        defaultValue="Small"
+        sx={{
+          '& fieldset': { border: 'none' },
+        }}
+        fullWidth
+        className={myStyles.input}
+        label=""
+        defaultValue="Mức giá"
         size="small"
+        variant="outlined"
+        id="standard-basic"
         onClick={handleClick}
+        InputProps={{
+          disableUnderline: true,
+          endAdornment: (
+            <InputAdornment position="start" sx={{ paddingBottom: 1 }}>
+              <FontAwesomeIcon icon={faAngleDown} />
+            </InputAdornment>
+          ),
+        }}
       />
       <Menu
         id="basic-menu"

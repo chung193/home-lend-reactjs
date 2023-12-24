@@ -10,7 +10,14 @@ import TextField from '@mui/material/TextField';
 import Slider from '@mui/material/Slider';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
+import InputAdornment from '@mui/material/InputAdornment';
+
+import {
+  faAngleDown
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SelectTextField from '../FormItems/SelectTextField';
+import myStyles from '../style.scss';
 
 export default function MenuLocation() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -24,15 +31,26 @@ export default function MenuLocation() {
 
   return (
     <>
-      <Typography variant="h6" component="h6">
-                Khu vực
-      </Typography>
       <TextField
-        label="Size"
-        id="filled-size-small"
-        defaultValue="Small"
+        sx={{
+          '& fieldset': { border: 'none' },
+        }}
+        fullWidth
+        className={myStyles.input}
+        label=""
+        defaultValue="Trên toàn quốc"
         size="small"
+        variant="outlined"
+        id="standard-basic"
         onClick={handleClick}
+        InputProps={{
+          disableUnderline: true,
+          endAdornment: (
+            <InputAdornment position="start" sx={{ paddingBottom: 1 }}>
+              <FontAwesomeIcon icon={faAngleDown} />
+            </InputAdornment>
+          ),
+        }}
       />
       <Menu
         anchorEl={anchorEl}

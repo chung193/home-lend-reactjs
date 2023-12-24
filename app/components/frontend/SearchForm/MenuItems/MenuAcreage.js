@@ -9,8 +9,14 @@ import { FormLabel } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import Stack from '@mui/material/Stack';
+import InputAdornment from '@mui/material/InputAdornment';
+import {
+  faAngleDown
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SelectTextField from '../FormItems/SelectTextField';
 import Slider from '../FormItems/Slider';
+import myStyles from '../style.scss';
 
 export default function MenuAcreage() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -24,15 +30,26 @@ export default function MenuAcreage() {
 
   return (
     <>
-      <Typography variant="h6" component="h6">
-                Diện tích
-      </Typography>
       <TextField
-        label="Size"
-        id="filled-size-small"
-        defaultValue="Small"
+        sx={{
+          '& fieldset': { border: 'none' },
+        }}
+        fullWidth
+        className={myStyles.input}
+        label=""
+        defaultValue="Diện tích"
         size="small"
+        variant="outlined"
+        id="standard-basic"
         onClick={handleClick}
+        InputProps={{
+          disableUnderline: true,
+          endAdornment: (
+            <InputAdornment position="start" sx={{ paddingBottom: 1 }}>
+              <FontAwesomeIcon icon={faAngleDown} />
+            </InputAdornment>
+          ),
+        }}
       />
       <Menu
         id="basic-menu"

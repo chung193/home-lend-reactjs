@@ -509,6 +509,7 @@
   "boilerplate.components.Header.user.profile": "My Profile",
   "boilerplate.components.Header.user.task": "My Task",
   "boilerplate.components.Header.user.email": "My Inbox",
+  "boilerplate.components.Header.user.login": "Log In",
   "boilerplate.components.Header.user.logout": "Log Out",
   "boilerplate.components.Landing.header.feature": "Feature",
   "boilerplate.components.Landing.header.showcase": "Showcase",

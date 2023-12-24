@@ -6,6 +6,7 @@ import MenuLocation from './MenuItems/MenuLocation';
 import MenuPrice from './MenuItems/MenuPrice';
 import MenuAcreage from './MenuItems/MenuAcreage';
 import MenuExtend from './MenuItems/MenuExtend';
+import myStyles from './style.scss';
 
 export default function SearchForm() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -24,24 +25,26 @@ export default function SearchForm() {
   };
 
   return (
-    <Box sx={{ flexGrow: 1, minWidth: '100vw', minHeight: 200 }}>
-      <Grid container spacing={2}>
-        <Grid item sx={3}>
-          <MenuLocation />
+    <Box sx={{ }}>
+      <Box className={myStyles.searchBox}>
+        <Grid container spacing={2} className={myStyles.searchGrid}>
+          <Grid item xs={3} className={myStyles.searchItem}>
+            <MenuLocation />
+          </Grid>
+          <Grid item xs={2} className={myStyles.searchItem}>
+            <MenuPrice />
+          </Grid>
+          <Grid item xs={2} className={myStyles.searchItem}>
+            <MenuAcreage />
+          </Grid>
+          <Grid item xs={3} sx={{ paddingTop: '5px !important' }}>
+            <MenuExtend />
+          </Grid>
+          <Grid item xs={2} sx={{ padding: '5px !important' }}>
+            <Button variant="contained" className={myStyles.searchButton}>Tìm kiếm</Button>
+          </Grid>
         </Grid>
-        <Grid item sx={2}>
-          <MenuPrice />
-        </Grid>
-        <Grid item sx={2}>
-          <MenuAcreage />
-        </Grid>
-        <Grid item sx={2}>
-          <MenuExtend />
-        </Grid>
-        <Grid item sx={3}>
-          <Button variant="contained">Tìm kiếm</Button>
-        </Grid>
-      </Grid>
+      </Box>
     </Box>
   );
 }

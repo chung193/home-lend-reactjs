@@ -29,6 +29,7 @@ function HomePage(props) {
         <meta property="twitter:description" content={description} />
       </Helmet>
       <Slideshow/>
+      <SearchForm/>
       <Feature/>
       <FeatureBanner/>
       <CarouselList/>
@@ -37,7 +38,7 @@ function HomePage(props) {
       <CarouselCenter/>
       <Model3D/>
       <Latest/>
-      <SearchForm/>
+
     </div>
   );
 }

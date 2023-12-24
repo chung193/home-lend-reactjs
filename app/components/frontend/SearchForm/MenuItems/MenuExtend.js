@@ -10,8 +10,14 @@ import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import Slider from '@mui/material/Slider';
 import Stack from '@mui/material/Stack';
-import SelectTextField from '../FormItems/SelectTextField';
+import InputAdornment from '@mui/material/InputAdornment';
 
+import {
+  faAngleDown
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import myStyles from '../style.scss';
+import SelectTextField from '../FormItems/SelectTextField';
 export default function MenuExtend() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -24,15 +30,26 @@ export default function MenuExtend() {
 
   return (
     <>
-      <Typography variant="h6" component="h6">
-                Lọc thêm
-      </Typography>
       <TextField
-        label="Size"
-        id="filled-size-small"
-        defaultValue="Small"
+        sx={{
+          '& fieldset': { border: 'none' },
+        }}
+        fullWidth
+        className={myStyles.input}
+        label=""
+        defaultValue="Lọc thêm"
         size="small"
+        variant="outlined"
+        id="standard-basic"
         onClick={handleClick}
+        InputProps={{
+          disableUnderline: true,
+          endAdornment: (
+            <InputAdornment position="start" sx={{ paddingBottom: 1 }}>
+              <FontAwesomeIcon icon={faAngleDown} />
+            </InputAdornment>
+          ),
+        }}
       />
       <Menu
         id="basic-menu"
